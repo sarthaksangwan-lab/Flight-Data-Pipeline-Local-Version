@@ -21,22 +21,24 @@ The extract.ipynb notebook connects to the Aviationstack API and fetches live fl
 #### 2. Transform: Clean and Structure the Data
 The transform.ipynb notebook reads all raw .json files from the raw/ folder, extracts important fields (like airline, flight number, airports, scheduled time, and status), removes duplicates, and saves the cleaned data as a .csv file in the processed/ folder.
 
-## --- Notes ---
-**1) Replace the placeholder API key** in extract.ipynb with your own Aviationstack API Key:
+## --- Steps To Follow ---
+**1)** Create two folders "**raw**" & "**processed**" with the exact same name.
+
+**2) Replace the placeholder API key** in extract.ipynb with your own Aviationstack API Key:
 
     API_KEY = "your_actual_api_key"
 
-**2) Update the file path** in extract.ipynb to point to your local raw data directory:  
+**3) Update the file path** in extract.ipynb to point to your local raw data directory:  
 
     filename = "YOUR_RAW_FOLDER_PATH/raw/flights_{timestamp}.json"
 
-**3) Update folder paths** in transform.ipynb to match your local setup:
+**4) Update folder paths** in transform.ipynb to match your local setup:
 
     RAW_FOLDER = "YOUR_RAW_FOLDER_PATH/raw"
     PROCESSED_FOLDER = "YOUR_PROCESSED_FOLDER_PATH/processed"
 
-**4) Run** extract.ipynb **first** to fetch real-time flight data and save it as raw .json files in the specified folder.
+**5) Run** extract.ipynb **first** to fetch real-time flight data and save it as raw .json files in the specified folder.
 
-**5) Run** transform.ipynb **next** to read all raw .json files, process the flight data, remove duplicates, and save a clean .csv in the processed folder.
+**6) Run** transform.ipynb **next** to read all raw .json files, process the flight data, remove duplicates, and save a clean .csv in the processed folder.
 
 ##### ***AND YOU'RE ALL SET!!***
